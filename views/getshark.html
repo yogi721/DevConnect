@@ -46,8 +46,10 @@
               <div class="caption">Your Sharks</div>
                   <ul>
                      <% sharks.forEach(function(shark) { %>
-                        <p>Name: <%= shark.name %></p>
-                        <p>Character: <%= shark.character %></p>
+                        <li>
+                            <p>Name: <%= shark.name %></p>
+                            <p>Character: <%= shark.character %></p>
+                        </li>
                      <% }); %>
                   </ul>
             </p>
