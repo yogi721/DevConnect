@@ -1,19 +1,19 @@
 const express = require('express');
+const db = require('./config/db');
+
 const app = express();
-const router = express.Router();
-const db = require('./db');
-const sharks = require(__dirname +'/SharksModule/routes/sharks');
 
-const path = __dirname + '/views/';
-const port = process.env.PORT || 8080;
+app.get('/', (req, res) => res.send('API Running'));
 
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path));
-app.use('/sharks', sharks);
-app.use('/api', require(__dirname +'/SharksModule/routes/api'));
+// Define routes
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/profile', require('./routes/api/profile'));
+app.use('/api/posts', require('./routes/api/posts'));
 
-app.listen(port, function () {
+const port = process.env.PORT || 8081;
+
+
+app.listen(port, () => {
   console.log(`Example app listening on ${port}!`);
 });
