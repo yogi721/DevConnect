@@ -1,13 +1,13 @@
 {
-  "name": "nodejs-image-demo",
+  "name": "nodejs-image-demo-API",
   "version": "1.0.0",
-  "description": "nodejs image demo",
-  "author": "katjuell <kathleenjuell@gmail.com>",
+  "description": "nodejs image demo API",
+  "author": "Mehdi <semlali.mehdi.1980@gmail.com>",
   "license": "MIT",
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/katjuell/nodejs-image-demo.git"
+    "url": "https://github.com/yogi721/DevConnect.git"
   },
   "keywords": [
     "nodejs",
