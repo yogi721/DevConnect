@@ -64,13 +64,14 @@ async (req, res) => {
                 id: user.id
             }
         };
+        
         jwt.sign(
             payload, 
-            config.get('jwtToken'),
+            config.get("jwtSecret"),
             {expiresIn: 36000},
-            (err, token)=> {
+            (err, token) => {
                 if(err) throw err;
-                res.json({token});
+                res.json({ token });
             }
         );
 
