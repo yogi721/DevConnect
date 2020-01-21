@@ -58,8 +58,11 @@ async (req, res) => {
         await user.save();
 
         // Return jsonwebtoken
-        
-        res.send('User registred')
+        const payload = {
+            user: {
+                id: user.id
+            }
+        }
 
     } catch (err) {
         console.error(err.message);
